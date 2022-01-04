@@ -7,6 +7,8 @@ class Product(models.Model):
     price = models.FloatField()
     desc = models.TextField()
     stock = models.IntegerField()
+    rating = models.IntegerField()
+
     seller = models.ForeignKey(Seller, on_delete=models.CASCADE, blank=False) #seller name rakhnai parxa kunai pani product ko
 
     def __str__(self):
