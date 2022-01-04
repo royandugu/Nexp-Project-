@@ -1,0 +1,6 @@
+#pip install requirement.txt
+
+django
+
+# Pillow for managing pictures Model Customer
+Pillow
