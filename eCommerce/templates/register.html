@@ -10,7 +10,7 @@
 {% block body %}
 
 <div style="margin-top: 25px">
-    <form action="{% url 'login_request' %}" method="post" style="max-width:600px">
+    <form action="{% url 'register_request' %}" method="post" style="max-width:600px">
     {% csrf_token %}
     {% comment %} <div class="imgcontainer">
       <img src="img_avatar2.png" alt="Avatar" class="avatar">
@@ -22,14 +22,16 @@
   
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="password" required>
+
+      <label for="psw"><b>Confirm Password</b></label>
+      <input type="password" placeholder="Enter Password Again" name="confirmPassword" required>
   
-      <button type="submit">Login</button>
+      <button type="submit">Register</button>
       
     </div>
   
     <div class="container" style="background-color:#f1f1f1">
-      <a href="{% url 'register' %}"><button type="button" class="cancelbtn">Sign Up</button></a>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+      <a href="{% url 'login' %}"><button type="button" class="cancelbtn">Sign In</button></a>
     </div>
   </form> 
 </div>
