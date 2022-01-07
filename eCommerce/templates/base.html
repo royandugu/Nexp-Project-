@@ -1,18 +1,67 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="data:;base64,iVBORw0KGgo="> {% comment %} To stop linking favicon.io {% endcomment %}
+
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
     {% block head %}
     {% endblock head %}
 </head>
 <body>
-    
+    <!----Menu---->
+	<div class="menu bg-dark">
+		<ul class="nav nav-bar justify-content-end">
+			<li class="nav-item">
+				<a href="{% url 'home' %}" class="nav-link"> Home </a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link"> About </a>
+			</li>
+			<li class="nav-item">
+				<a href="{% url 'login' %}" class="nav-link"> Login </a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link"> SignUp</a>
+			</li>
+			<li class="nav-item d-block d-md-none iconSml">
+				<a href="#" class="nav-link"> <i class="fas fa-shopping-cart"></i> </a>
+			</li>
+		</ul>
+	</div>
+
+	<!--Title and search-->
+	<div class="container-fluid titleAndMenuHolder">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-12 logoHolder">
+				<h1> bANJOI </h1>
+			</div>
+			<div class="col-lg-8 col-md-8 col-12 searchButtonHolder">
+				<form>
+					<input type="text" placeholder="Search your thread" />
+				</form>
+			</div>
+			<div class="col-lg-1 col-md-1 col-12 userCartHolder">
+				<div class="d-none d-md-block">
+					<i class="fas fa-shopping-cart"></i>
+				</div>
+
+			</div>
+		</div>
+	</div>
 
 
     {% block body %}
     {% endblock body %}
+
+	<script src="https://kit.fontawesome.com/3c2a34836f.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

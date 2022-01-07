@@ -1,0 +1,60 @@
+body>*{
+	font-family: arial;
+}
+
+
+/*The top heading*/
+.logoHolder h1{
+	font-family: broadway !important;
+	color: #FF9955;
+	text-align: center;
+}
+.searchButtonHolder input{
+	height: 35px;
+	width: 100%;
+	font-size: 15px;
+	padding-left: 10px;
+	outline: none;
+	margin-top: 10px;
+	border: 1px solid #bdbdbd;
+	position: relative;
+	margin-bottom: 10px;
+}
+.searchButtonHolder::before{
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	color: white;
+	font-size: 20px;
+	padding-left: 12px;
+	padding-top: 3px;
+	content:'\f002';
+	height: 35px;
+	width: 45px;
+	background:#FF9955;
+	position: absolute;	
+	cursor: pointer;
+	top: 10px;
+	right:4%;
+	z-index: 2;
+}
+.userCartHolder i{
+	font-size: 30px;
+	text-align: left;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.userCartHolder i:hover{
+	color: grey;
+}
+
+
+/*Menu section*/
+.menu ul{
+	margin-right: 40px;
+}
+.menu a{
+	color: #b8b8b8;
+}
+.menu a:hover{
+	color: white;
+}

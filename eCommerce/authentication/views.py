@@ -6,7 +6,7 @@ from authentication.models import Customer, Seller
 
 # Create your views here.
 def login_view(request):
-    return render(request, 'test.html')
+    return render(request, 'login.html')
 
 def login_request(request):
     if request.method == 'POST':
@@ -23,7 +23,7 @@ def login_request(request):
             return redirect('loginPage')
     return render(request, 'login.html')
 
-def register_customer(request, str):
+def register(request, str):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
