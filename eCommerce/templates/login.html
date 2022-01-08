@@ -12,9 +12,9 @@
 <div style="margin-top: 25px">
     <form action="{% url 'login_request' %}" method="post" style="max-width:600px">
     {% csrf_token %}
-    {% comment %} <div class="imgcontainer">
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div> {% endcomment %}
+    <div class="imgcontainer">
+      <a href="{% url provider_login_url 'google' %}" class="fa fa-google"></a>
+    </div>
   
     <div class="container">
       <label for="uname"><b>Username</b></label>
