@@ -48,6 +48,63 @@ body>*{
 }
 
 
+
+/*Cart stack*/
+.cartStack{
+	position:absolute;
+	width:0%;
+	top:96px;
+	right:0;
+	height:520px;
+	z-index:3;
+	background:rgb(53, 53, 53);
+	overflow:hidden;
+}
+.cartIconClicked{
+	width:30%;
+	transition:.5s ease-in-out;
+}
+.cardIconUnclicked{
+	width:0%;
+	transition:.5s ease-in-out;
+}
+.fa-times-circle{
+	color:#FF9955;
+	font-size:25px;
+	margin:10px 0px 10px 10px;
+	cursor:pointer;
+}
+.cartButtonContainer{
+	border:1px solid rgb(75, 75, 75);
+}
+.cartBody{
+	height:100%;
+	text-align: center;
+}
+.cartBody button{
+	color:white;
+	width:80%;
+	background:#FF9955;
+	border-radius:10px;
+	padding:10px;
+	margin-top:80%;
+	border:none;
+	cursor:pointer;
+}
+.cartBody button:hover{
+	background:#ff9f5f;
+}
+.cartBody h5{
+	color:grey;
+	margin:20px 20px 10px 20px;
+	pointer-events:none;
+}
+.cartBody h5>i{
+	margin-left:10px;
+	margin-right:5px;
+}
+
+
 /*Menu section*/
 .menu ul{
 	margin-right: 40px;
