@@ -4,6 +4,13 @@ body>*{
 
 
 /*The top heading*/
+#fixedPosition{
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:4;
+	background:white;
+}
 .logoHolder h1{
 	font-family: broadway !important;
 	color: #FF9955;
