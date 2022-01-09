@@ -56,6 +56,9 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
+
+    'crispy_forms'
 ]
 
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
@@ -63,7 +66,7 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False
 
-SITE_ID = 2
+SITE_ID = 5
 
 # Provider specific settings
 SOCIALACCOUNT_PROVIDERS = {
@@ -76,8 +79,31 @@ SOCIALACCOUNT_PROVIDERS = {
             'secret': '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',
             'key': ''
         }
+    },
+    'facebook': {
+        'METHOD': 'oauth2',
+        'SDK_URL': '//connect.facebook.net/{locale}/sdk.js',
+        'SCOPE': ['email', 'public_profile'],
+        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+        'INIT_PARAMS': {'cookie': True},
+        'FIELDS': [
+            'id',
+            'first_name',
+            'last_name',
+            'middle_name',
+            'name',
+            'name_format',
+            'picture',
+            'short_name'
+        ],
+        'EXCHANGE_TOKEN': True,
+        'LOCALE_FUNC': 'path.to.callable',
+        'VERIFIED_EMAIL': False,
+        'VERSION': 'v7.0',
     }
 }
+
+LOGIN_REDIRECT_URL = 'home'
 
 
 MIDDLEWARE = [
