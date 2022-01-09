@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load account %}
+{% load socialaccount %}
 
 {% block head %}
 
@@ -10,11 +12,13 @@
 {% block body %}
 
 <div style="margin-top: 25px">
+  <div class="imgcontainer">
+    <a href="{% provider_login_url 'google' %}" target="_parent" class="fa fa-google"></a>
+    {% comment %} <a href="{% provider_login_url 'facebook' method='oauth2'%}" class="fa fa-facebook"></a>  Doesnot work in development mode needs ssl certificate{% endcomment %}
+  </div>
+
     <form action="{% url 'login_request' %}" method="post" style="max-width:600px">
     {% csrf_token %}
-    {% comment %} <div class="imgcontainer">
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div> {% endcomment %}
   
     <div class="container">
       <label for="uname"><b>Username</b></label>
