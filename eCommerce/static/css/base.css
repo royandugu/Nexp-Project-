@@ -8,6 +8,7 @@ body>*{
 	font-family: broadway !important;
 	color: #FF9955;
 	text-align: center;
+	cursor:pointer;
 }
 .searchButtonHolder input{
 	height: 35px;
@@ -114,4 +115,18 @@ body>*{
 }
 .menu a:hover{
 	color: white;
+}
+
+
+
+
+
+
+
+/*Global classes*/
+.visibilityHidden{
+	visibility: hidden !important;
+}
+.visibilityVisible{
+	visibility: visible !important;
 }
