@@ -1,4 +1,6 @@
 {% load static %}
+{% load account %}
+{% load socialaccount %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,12 +27,23 @@
 			<li class="nav-item">
 				<a href="#" class="nav-link"> About </a>
 			</li>
+
+			{% if request.user.is_authenticated %}
 			<li class="nav-item">
-				<a href="{% url 'login' %}" class="nav-link"> Login </a>
+				<form action="{% url 'account_logout' %}" method="post">
+					{% csrf_token %}
+					<p><input type="submit" class="nav-link">{{request.user.username.upper}} </p>
+				</form>
+			</li>
+			{% else %}
+			<li class="nav-item">
+				<a href="{% url 'account_login' %}" class="nav-link"> Login </a>
 			</li>
 			<li class="nav-item">
 				<a href="#" class="nav-link"> Sell </a>
 			</li>
+			{% endif %}
+
 			<li class="nav-item d-block d-md-none iconSml">
 				<a href="#" class="nav-link"> <i class="fas fa-shopping-cart"></i> </a>
 			</li>
