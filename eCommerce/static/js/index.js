@@ -33,3 +33,13 @@ document.querySelector(".beforeIcon").addEventListener("click",()=>{
         })
     }
 })
+
+
+//Top sellers
+let sellerContainer=document.querySelector(".topSellersInfo");
+for(let i=0;i<5;i++){
+    let indSeller=document.createElement("div");
+    indSeller.setAttribute("class","seller");
+    sellerContainer.appendChild(indSeller);
+}
+
