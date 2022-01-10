@@ -26,7 +26,6 @@ document.querySelector(".afterIcon").addEventListener("click",()=>{
     }
 })
 document.querySelector(".beforeIcon").addEventListener("click",()=>{
-    
     if(l>0){
         l=l-moveValue;
         trendings.forEach(index=>{
