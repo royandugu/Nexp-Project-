@@ -16,17 +16,18 @@
 	margin-left:10px;
 	position: relative;
 }
-.super{
-	margin-top:30px;
+.trendingContainer h3{
+	margin-left:10px;
 }
 .cardContainer{
 	display:flex;
 	align-items: center;
 	position: relative;
 	height:200px;
-	width:98%;
+	width:99%;
 	overflow-x: auto;
 	transition:0.5s ease-in-out;
+	padding: 0px !important;;
 }
 .cardContainer::-webkit-scrollbar{
 	display: none;
@@ -46,7 +47,7 @@
 	width:40px;
 	border-radius:50%;
 	position:absolute;
-	top:110px;
+	top:95px;
 	z-index: 2;
 }
 .beforeIcon i,.afterIcon i{
@@ -66,10 +67,78 @@
 }
 
 
+
+/*Top sellers*/
+.topSellersInfo{
+	margin-top:20px;
+	display: flex;
+	justify-content: center;
+}
+.seller{
+	height:60px;
+	width:60px;
+	border-radius:50%;
+	background:grey;
+	margin-right:20px;
+	margin-bottom:20px;
+	position: relative;
+}
+
+
+
+/*Sales collection*/
+.salesCollection{
+	padding-left:20px;
+	padding-right:20px;
+	margin-top:20px;
+}
+.salesCollection div{
+	padding:10px;
+}
+.productCollection{
+	border-radius:20px;
+	border:1px solid rgb(219, 219, 219);
+	padding:10px;
+	background:rgb(233, 233, 233);
+}
+.productCollection h4{
+	text-align:center;
+}
+.firstDiv{
+	padding-left:0px !important;
+}
+.lastDiv{
+	padding-right:0px !important;
+}
+.salesCollection button{
+	height:30px;
+	width:40%;
+	color:white;
+	background:#FF9955;
+	border:none;
+	margin:10px 0px 10px 20px;
+	cursor:pointer;
+	outline:none;
+}
+.salesCollection button:hover{
+	background:#ff9f5f;
+}
+
+
+
 /*Media queries*/
 @media (max-width:768px) {
 	.cardContainer div{
 		min-width:49%;
 		margin-left:.7%;
+	}
+	.salesCollection div{
+		padding:10px !important; 
+	}
+}
+@media (min-width:768px){
+	
+	.topSellersInfo{
+		display:none !important;
 	}
 }
