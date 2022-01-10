@@ -1,50 +1,60 @@
 
-
 /*Slider section*/
 .banners{
 	width:100%;
 	height:100px;
 	background:greenyellow;
 }
+
+
+
+
 /*Trending section*/
 .trendingContainer{
 	margin-top:25px;
 	margin-left:10px;
+	position: relative;
+}
+.super{
+	overflow:hidden;
 }
 .cardContainer{
-	width:100%;
-	overflow: hidden;
-	position:relative;
+	position: relative;
 	height:200px;
+	transition:0.5s ease-in-out;
 }
-.cardContainer::before,.cardContainer::after{
-	
-	cursor:pointer !important;
-	font-family:"Font Awesome 5 Free";
+.beforeIcon,.afterIcon{
+	cursor:pointer;
 	font-weight:900;
 	font-size:50px;
 	height:40px;
 	width:40px;
+	border-radius:50%;
 	position:absolute;
-	top:65px;
+	top:100px;
 	z-index: 2;
+}
+.beforeIcon i,.afterIcon i{
 	opacity:.5;
 }
-.cardContainer:hover::before{
+.beforeIcon i:hover, .afterIcon i:hover{
 	opacity:1;
 }
-.cardContainer::before{
+.beforeIcon{
 	content:"\f0a8";
 	left:20px;
 }
-.cardContainer::after{
+.afterIcon{
+	float:right;
 	content:"\f0a9";
 	right:20px;
 }
 .trendingCards{
 	position:absolute;
 	top:0;
-	border:1px solid black;
+	border:1px solid grey;
 	height:200px;
 	width:200px;
 }
+
+
