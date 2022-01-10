@@ -1,35 +1,41 @@
-{% extends 'base.html' %}
 
-{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Index </title>
+        <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="../static/css/index.css"/> 
+    </head>
+<body>
 
-{% block head %}
+    
+<!--Remove the elements above it and import base.html-->
 
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
-
-{% endblock head %}
-
-{% block body %}
-
-	
-
-	<!--sliderWithIndicators-->
-	<div class="banners">
-	</div>
+<!---sliderWithIndicators--->
+<div class="banners">
+		
+</div>
 
 
 
-	<!--Trending-->
-	<div class="trendingContainer">
-		<h4> Trending </h4>
-		<div class="cardContainer">
-		</div>
-		<div class="pointers">
-		</div>
-	</div>
+<!---Trending--->
+<div class="trendingContainer">
+    <h4> Trending </h4>
+    <div class="beforeIcon">
+        <i class="fas fa-angle-left"></i>
+    </div>
+    <div class="afterIcon">
+        <i class="fas fa-angle-right"></i>
+    </div>
+    <div class="super">
+        <div class="cardContainer">
+        
+        </div>
+    </div>
+</div>
 
-	
-{% comment %} <script type="text/javascript" src="JS/index.js"></script> {% endcomment %}
-
-{% endblock body %}
-
+<!---To be imported from footer.js-->
+</body>
+<script type="text/javascript" src="../static/js/index.js"></script>
 </html>
+<!---Remove the code above-->
