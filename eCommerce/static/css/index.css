@@ -4,6 +4,7 @@
 	width:100%;
 	height:100px;
 	background:greenyellow;
+	margin-top:7%;
 }
 
 
@@ -16,12 +17,26 @@
 	position: relative;
 }
 .super{
-	overflow:hidden;
+	margin-top:30px;
 }
 .cardContainer{
+	display:flex;
+	align-items: center;
 	position: relative;
 	height:200px;
+	width:98%;
+	overflow-x: auto;
 	transition:0.5s ease-in-out;
+}
+.cardContainer::-webkit-scrollbar{
+	display: none;
+}
+.cardContainer div{
+	border:1px solid grey;
+	min-width: 24%;
+	height:90%;
+	margin-left:.82%;
+	transition: 0.5s ease-in-out;
 }
 .beforeIcon,.afterIcon{
 	cursor:pointer;
@@ -31,7 +46,7 @@
 	width:40px;
 	border-radius:50%;
 	position:absolute;
-	top:100px;
+	top:110px;
 	z-index: 2;
 }
 .beforeIcon i,.afterIcon i{
@@ -47,14 +62,14 @@
 .afterIcon{
 	float:right;
 	content:"\f0a9";
-	right:20px;
-}
-.trendingCards{
-	position:absolute;
-	top:0;
-	border:1px solid grey;
-	height:200px;
-	width:200px;
+	right:30px;
 }
 
 
+/*Media queries*/
+@media (max-width:768px) {
+	.cardContainer div{
+		min-width:49%;
+		margin-left:.7%;
+	}
+}
