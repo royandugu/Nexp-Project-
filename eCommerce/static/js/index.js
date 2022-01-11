@@ -46,6 +46,12 @@ function jumpNumbers(){
     }
     console.log("You just clicked the left button");
 }
+//Button clicking link.. when the button is clicked it leads us to the Product.html
+let buttonLists=document.querySelectorAll(".productCollection>a");
+    buttonLists.forEach(indAnch=>{
+        indAnch.setAttribute("href","../templates/product.html");
+    })
+console.log(buttonLists);
 
 
 

@@ -1,0 +1,48 @@
+.otherOptions{
+    border-right:1px solid grey;
+    margin-bottom:30px;
+    min-height:100vh !important;
+    border-bottom:1px solid grey;
+
+}
+.otherOptions h5{
+    font-weight: bold;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+.userOptions{
+    margin-top:20px;
+    display:flex;
+    flex-flow:column;
+}
+.userOptions a{
+    color:grey !important;
+    text-decoration:none;
+}
+.userOptions a:hover{
+    color:black !important;
+    cursor:pointer;
+}
+.sellerOptions{
+    margin-top:20px;
+}
+.sellerOptions .sellers{
+    background:grey;
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    margin-top:10px;
+}
+.priceRanges{
+    margin-top:20px;
+    display:flex;
+    flex-flow:column;
+    margin-bottom:20px;
+}
+.priceRanges a{
+    color:grey !important;
+}
+.priceRanges a:hover{
+    color:black !important;
+    cursor:pointer;
+}
