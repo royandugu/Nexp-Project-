@@ -13,12 +13,12 @@ let maxMove=403;
 let l=0;
 
 //For Mobile
-if(window.matchMedia("(max-width:768px)").matches){
-    moveValue=101.5;
-    maxMove=600;
-}
+
 document.querySelector(".afterIcon").addEventListener("click",()=>{
     if(l<maxMove){
+        jumpNumbers();
+        console.log(moveValue+" "+maxMove);
+        console.log()
         l=l+moveValue;
         trendings.forEach(index=>{
             index.style.transform="translateX("+ -l +"%)";
@@ -27,12 +27,27 @@ document.querySelector(".afterIcon").addEventListener("click",()=>{
 })
 document.querySelector(".beforeIcon").addEventListener("click",()=>{
     if(l>0){
+        jumpNumbers();
+        console.log(moveValue+" "+maxMove);
         l=l-moveValue;
         trendings.forEach(index=>{
             index.style.transform="translateX("+-l+"%)";
         })
     }
 })
+function jumpNumbers(){
+    if(window.matchMedia("(max-width:768px)").matches){
+        moveValue=101.5;
+        maxMove=600;
+    }
+    else{
+         moveValue=103.5;
+         maxMove=403;
+    }
+    console.log("You just clicked the left button");
+}
+
+
 
 
 //Top sellers
@@ -43,3 +58,7 @@ for(let i=0;i<5;i++){
     sellerContainer.appendChild(indSeller);
 }
 
+window.addEventListener("resize",()=>{
+    trendings.forEach(index=>index.style.transform="translateX("+0+"% )");
+    l=0;
+});
