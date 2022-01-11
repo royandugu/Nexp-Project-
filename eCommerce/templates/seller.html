@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}{% endblock head %}
+
+{% block body %}
+
+    {% if request.user.is_authenticated %}
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-4"> {% comment %} add garda 12 hunuparxa {% endcomment %}
+            <div class="container-fluid">
+                <table class="table table-sm table-hover border">
+                    <thead>
+                      <tr>
+                        <th colspan="2" scope="col">Your Orders</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-left">
+                      <tr>
+                        <td>Pending</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>Completed</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>Cancelled</td>
+                        <td>0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="container border">
+                <div><h5>Connect to customers</h5></div>
+                <div>
+                    <img src="{% static 'images/product.jpg' %}" class="img-fluid" alt="Responsive image">
+                </div>
+                <a href="{% url 'addProductPage' %}"><button class="btn btn-info btn-block">Add a Product</button></a>
+            </div>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+
+    {% else %}
+    <div class="text-center mx-auto col-12">
+        <h2>Grow your Business with Us</h3>
+        <h4>Open your virtual shop Now</h4>
+    </div>
+
+    <a href="{% url 'account_signup' %}"><button>Sign Up</button></a>
+
+    <p>Already a seller? <a href="{% url 'account_login' %}">Log In</a></p>
+    {% endif %}
+{% endblock body %}

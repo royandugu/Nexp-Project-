@@ -27,4 +27,3 @@ document.querySelector(".fa-times-circle").addEventListener("click",()=>{
     cartToggler("cartIconClicked","cardIconUnclicked",false)
     visibilityToggler("visibilityVisible","visibilityHidden");
 })
-

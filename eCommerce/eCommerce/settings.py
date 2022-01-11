@@ -78,6 +78,13 @@ SOCIALACCOUNT_PROVIDERS = {
             'client_id': '112732505635-qhf5oplu6aqefts8snp90t2f8pu1via7.apps.googleusercontent.com',
             'secret': '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',
             'key': ''
+        },
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
         }
     },
     'facebook': {
@@ -97,13 +104,16 @@ SOCIALACCOUNT_PROVIDERS = {
             'short_name'
         ],
         'EXCHANGE_TOKEN': True,
-        'LOCALE_FUNC': 'path.to.callable',
+        # 'LOCALE_FUNC': 'path.to.callable',
         'VERIFIED_EMAIL': False,
         'VERSION': 'v7.0',
     }
 }
 
 LOGIN_REDIRECT_URL = 'home'
+SOCIALACCOUNT_LOGIN_ON_GET=True # bypass "You are about to sign in using a third party account from Google. continue?"
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 MIDDLEWARE = [

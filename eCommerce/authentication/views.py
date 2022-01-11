@@ -2,7 +2,7 @@ from django.core.checks import messages
 from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
-from authentication.models import Customer
+from authentication.models import Profile
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -17,7 +17,7 @@ def login_request(request):
 
         user = authenticate(username = username, password = password)
 
-        if user is not None:
+        if (user is not None):
             login(request, user)
             return redirect('home')
         else:
@@ -47,7 +47,7 @@ def register(request):
                     return redirect('register')
                 else:
                     user = User.objects.create_user(username = username, password = confirm_password)
-                    Customer.objects.create(customer = user)
+                    Profile.objects.create(user = user)
                     return redirect('login')
             else:
                 messages.error(request, "Password do not match")
