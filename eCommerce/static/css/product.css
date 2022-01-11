@@ -1,9 +1,23 @@
-.otherOptions{
-    border-right:1px solid grey;
+.rightSide{
+    position:relative;
+}
+.banner{
+    height:80px;
+    background:green;
+    width:100%;
+}
+.otherOptions,.otherOptionsShort{
     margin-bottom:30px;
-    min-height:100vh !important;
-    border-bottom:1px solid grey;
-
+    position:fixed;
+    left:0;
+    height:100%;
+    padding-left:15px;
+    padding-right:15px;
+    overflow-y: auto;
+    background: white;
+}
+.otherOptionsShort{
+    display:none;
 }
 .otherOptions h5{
     font-weight: bold;
@@ -15,7 +29,7 @@
     display:flex;
     flex-flow:column;
 }
-.userOptions a{
+.userOptions a,.otherOptionsShort a{
     color:grey !important;
     text-decoration:none;
 }
@@ -33,6 +47,10 @@
     border-radius:50%;
     margin-top:10px;
 }
+.picture{
+    padding-top:10px;
+    padding-bottom:10px;
+}
 .priceRanges{
     margin-top:20px;
     display:flex;
@@ -45,4 +63,78 @@
 .priceRanges a:hover{
     color:black !important;
     cursor:pointer;
+}
+.product{
+    background:rgb(228, 228, 228);
+    border-radius:10px;
+    text-align:center;
+    border:1px solid rgb(221, 221, 221);
+    padding:10px;
+    margin-top:20px;
+    box-shadow: 1px 2px 2px 1px grey;
+}
+.productDescription{
+    padding-left:10px;
+    padding-right:10px;
+}
+.productDescription h5{
+    font-weight:bold;
+}
+.productDescription p{
+    text-align:left;
+    line-height:20px;
+    
+}
+.productDescription button{
+    color:white;
+    background:#FF9955;
+    cursor:pointer;
+    padding:10px;
+    outline:none;
+    border:none;
+    margin-top:10px; 
+    margin-bottom:10px;
+}
+.productDescription button:hover{
+    background:#ff9f5f;
+}
+.product>button{
+    margin-bottom:20px;
+}
+.smText{
+    display: none;
+    text-align:center !important;
+}
+.price{
+    font-weight:bold;
+    display:flex;
+    justify-content: center;
+}
+.finalProduct{
+    margin-bottom:20px;
+}
+/*Media quries*/
+@media (max-width:768px)  {
+    .productDescription p{
+        font-size:14px !important;
+    }
+}
+@media (max-width:800px)  {
+    .product p{
+        font-size:15px;
+    }
+    .lgText{
+        display:none;
+    }
+    .smText{
+        display:block;
+    }
+}
+@media (max-width:860px){
+    .otherOptions{
+        display:none;
+    }
+    .otherOptionsShort{
+        display: block;
+    }
 }
