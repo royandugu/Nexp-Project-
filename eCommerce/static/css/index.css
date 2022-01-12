@@ -74,16 +74,9 @@
 	display: flex;
 	justify-content: center;
 }
-.seller{
-	height:60px;
-	width:60px;
-	border-radius:50%;
-	background:grey;
-	margin-right:20px;
-	margin-bottom:20px;
+.sellers{
 	position: relative;
 }
-
 
 
 /*Sales collection*/

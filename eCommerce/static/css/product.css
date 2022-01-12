@@ -18,6 +18,8 @@
 }
 .otherOptionsShort{
     display:none;
+    padding-left:10px !important;
+    padding-right:0px !important;
 }
 .otherOptions h5{
     font-weight: bold;
@@ -33,19 +35,29 @@
     color:grey !important;
     text-decoration:none;
 }
-.userOptions a:hover{
+.userOptions a:hover,.otherOptionsShort a:hover{
     color:black !important;
     cursor:pointer;
 }
 .sellerOptions{
     margin-top:20px;
 }
-.sellerOptions .sellers{
+.sellerOptions .sellers,.sellerSpecial{
     background:grey;
     height:50px;
     width:50px;
     border-radius:50%;
     margin-top:10px;
+    position:relative;
+    cursor:pointer;
+}
+.sellerContent{
+    height:50px;
+    width:50px;
+    position:absolute;
+    top:0;
+    background:green;
+    left:50px;
 }
 .picture{
     padding-top:10px;
@@ -66,12 +78,15 @@
 }
 .product{
     background:rgb(228, 228, 228);
-    border-radius:10px;
     text-align:center;
     border:1px solid rgb(221, 221, 221);
     padding:10px;
     margin-top:20px;
-    box-shadow: 1px 2px 2px 1px grey;
+    cursor:pointer;
+    position:relative;
+}
+.product:hover{
+    border:1px solid rgb(179, 179, 179);
 }
 .productDescription{
     padding-left:10px;
@@ -108,7 +123,12 @@
 .price{
     font-weight:bold;
     display:flex;
+    flex-flow:column;
     justify-content: center;
+    align-items:center;
+}
+.price .productPriceF{
+    text-decoration:line-through;
 }
 .finalProduct{
     margin-bottom:20px;
@@ -126,15 +146,105 @@
     .lgText{
         display:none;
     }
-    .smText{
-        display:block;
-    }
 }
 @media (max-width:860px){
+    .sellerOptions .sellers,.sellerSpecial{
+        display:none;
+    }
     .otherOptions{
         display:none;
     }
     .otherOptionsShort{
         display: block;
     }
+    .userOptionsSmall{
+        display:flex;
+        flex-flow:column;
+        margin-top:20px;
+    }
+    .topSellerSmall{
+        display:flex;
+        flex-flow:column;
+        margin-top:20px;
+    }
+    .topSellerSmall div{
+        height:30px;
+        width:30px;
+        border-radius:50%;
+        background:grey;
+        margin-top:10px;
+    }
+    .priceRange{
+        display:flex;
+        flex-flow:column;
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+    .priceRange h5{
+        font-weight:bold;
+    }
+    .product h5{
+        margin-bottom:5px;
+    }
+    .price p{
+        margin:5px !important;
+    }
+}
+@media (max-width:400px){
+    .product h5{
+        font-size:14px;
+    }
+    .product p{
+        font-size:10px !important;
+    }
+    .product button{
+        padding:5px !important;
+        font-size:10px;
+    }
+    .otherOptionsShort h5,a{
+        font-size:15px; 
+    }
+}
+/*Animations*/
+#theButton{
+    cursor:pointer;
+}
+
+/*Active*/
+.active>a{
+    color:black !important;
+}
+  
+/*Popup*/
+.popUp{
+    position:absolute;
+    bottom:50px;
+    right:30px;
+    width:20vw;
+}
+.popUp input{
+    transform:scale(0);
+    border-radius:10px;
+    width:100%;
+    transition: .25s ease-in-out;
+    outline:none;
+    padding:5px;
+    border:.5px solid grey;
+
+}
+.sellerContent{
+    position: fixed;
+    padding:20px;
+    width:20%;
+    background:rgb(17, 16, 16);
+    margin-left:20px;
+    transition:.5s ease-in-out;
+    color:white;
+    transform:scale(0);
+}
+.visible{
+    transform:scale(1) !important;
+}
+.invisible{
+    transform:scale(0) !important;
 }

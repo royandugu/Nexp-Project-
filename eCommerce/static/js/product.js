@@ -1,18 +1,4 @@
-const productContainer=document.querySelector(".userOptions");
-const titles=["locals","art","book","auction","music","designs","school","parts"];
-for(let i=0;i<titles.length;i++){
-    let paragraph=document.createElement("a");
-    paragraph.setAttribute("class","otherProducts");
-    paragraph.innerHTML=titles[i];
-    productContainer.appendChild(paragraph);
-}
-//Top sellers
-const topSellers=document.querySelector(".sellerOptions");
-    for(let i=0;i<6;i++){
-        let circle=document.createElement("div");
-        circle.setAttribute("class","sellers");
-        topSellers.appendChild(circle);
-    }
+
 let product=document.querySelector(".product");
 let spaces=document.querySelectorAll(".space");
 for(let i=0;i<spaces.length;i++) {
@@ -21,7 +7,7 @@ for(let i=0;i<spaces.length;i++) {
 let productList=document.querySelectorAll(".product");
 productList[spaces.length].classList.add("finalProduct");
 let buttons=document.querySelectorAll(".firstButton");
-console.log(buttons);
+
 //Media check
 let cart=document.createElement("i");
 
@@ -32,3 +18,22 @@ function buttonSet(){
     else buttons.forEach(index=>index.innerHTML="<i class='fas fa-cart-arrow-down'></i> Add to cart");
 }
 buttonSet();
+
+//Last button
+let lastIcons=document.querySelectorAll(".lastButton i");
+let popUps=document.querySelectorAll(".popUp input");
+console.log(popUps);
+lastIcons.forEach(index=>index.addEventListener("click",displayForm));
+let numberEnter=false;
+function displayForm(event){
+    if(numberEnter===false){
+        popUps[Array.from(lastIcons).indexOf(event.target)].classList.remove("invisible");
+        popUps[Array.from(lastIcons).indexOf(event.target)].classList.add("visible");
+        numberEnter=true;
+    }
+    else {
+        popUps[Array.from(lastIcons).indexOf(event.target)].classList.remove("visible");
+        popUps[Array.from(lastIcons).indexOf(event.target)].classList.add("invisible");
+        numberEnter=false;
+    }
+}   
