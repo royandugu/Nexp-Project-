@@ -5,6 +5,11 @@ for(let i=0;i<spaces.length;i++) {
     spaces[i].appendChild(product.cloneNode(true));
 }
 let productList=document.querySelectorAll(".product");
+let pageType=document.querySelector(".pageType>div");
+productList.forEach((index,i)=>{
+    index.setAttribute("id",pageType.getAttribute("class")+i);
+})
+console.log(productList);
 productList[spaces.length].classList.add("finalProduct");
 let buttons=document.querySelectorAll(".firstButton");
 
