@@ -84,6 +84,9 @@
     background:#ff9f5f;
     
 }
+.svgContainer{
+    background:black;
+}
 .otherProduct i{
     color:gold;
 }
@@ -163,4 +166,10 @@
     .userComment{
         border-right:1px solid rgb(143, 143, 143);;
     }
+}
+#theButton:hover{
+    cursor:pointer;
+}
+.userReview{
+    margin-bottom:20px;
 }
