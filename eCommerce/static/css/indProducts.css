@@ -1,0 +1,166 @@
+
+.xzoom-container,.description{
+    
+    margin-top:20px;
+}
+.imgContainer{
+    text-align:right;
+}
+.description p,.description h5{
+    margin-top:10px;
+}
+.dummyPrice{
+    text-decoration:line-through;
+}
+.description button{
+    background:#FF9955;
+    color:white;
+    padding:10px;
+    border:none;
+    cursor:pointer;
+    outline:none;
+    margin-top:10px;
+}
+.description a{
+    color:black;
+    text-decoration: none;
+}
+.description button:hover{
+    background:#ff9f5f;
+}
+.description button i{
+    margin-right:5px;
+}
+.otherImages{
+    padding:10px;
+}
+.moreFromSeller{
+    margin-left:10px;
+}
+.product{
+    margin-top:10px;
+    text-align:center;
+}
+.moreFromSeller h5{
+    margin-top:30px;
+}
+.heading h5{
+    margin-top:20px;
+    margin-left:20px;
+}
+.opContainer{
+    margin-top:10px;
+ 
+}
+.secondParent{
+    height:100%;
+}
+.otherProduct{
+    margin-top:20px;
+    text-align:center;
+    transform:scale(0);
+    transition:.5s ease-in-out;
+}
+.otherProduct p{
+    margin-top:10px;
+    text-align:left;
+}
+.otherProduct button,.comment button{
+    background:#FF9955;
+    padding:10px;
+    border:none;
+    outline:none;
+    color:white;
+    cursor:pointer;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.comment button{
+    padding-left:20px !important;
+    padding-right:20px !important;
+    padding:4px; 
+}
+.comment button:hover{
+    background:#ff9f5f;
+    
+}
+.otherProduct i{
+    color:gold;
+}
+.rgb{
+    height:100%;
+    width:100%;
+    padding:10px;
+    
+    background:rgba(0,0,0,.7);
+}
+.rgb>*{
+    color:white;
+}
+.otherProduct button:hover{
+    background:#ff9f5f;
+}
+.visibilityHidden{
+    transform:scale(0);
+}
+.visibilityVisible{
+    transform:scale(1);
+}
+
+
+/*Comment section*/
+.commentContainer{
+    background:rgb(219, 219, 219);
+    margin-top:30px;
+}
+.userComment h5{
+    margin-top:20px;
+    font-weight: bold;
+}
+.userComment i{
+    margin-top:10px;
+    margin-left:5px;
+}
+.userComment textarea{
+    width:90%;
+    margin-top:20px;
+    border:none;
+    outline:none;
+}
+.othersComments h2{
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-weight:bold;
+}
+.photo{
+    background:grey;
+    height:60px;
+    width:60px;
+    margin-right:20px;
+}
+.customerComments{
+    display:flex;
+    margin-top:10px;
+    background:rgb(202, 202, 202);
+    padding:20px;
+}
+.comment p{
+    font-size:15px;
+}
+.comment h5{
+    margin:0px !important;
+    font-weight: bold;
+}
+.comment i{
+    margin-left:5px;
+}
+@media(max-width:768px){
+    .userComment{
+        border-bottom:1px solid rgb(143, 143, 143);
+    }
+}
+@media(min-width:768px){
+    .userComment{
+        border-right:1px solid rgb(143, 143, 143);;
+    }
+}
