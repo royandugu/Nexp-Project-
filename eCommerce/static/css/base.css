@@ -58,6 +58,17 @@ body>*{
 
 
 /*Cart stack*/
+.priceContainer{
+	display: flex;
+	justify-content: right;
+	border-bottom:1px solid rgb(75, 75, 75);
+}
+.priceContainer>h5{
+	color:white;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right:10px;
+}
 .cartStack{
 	position:absolute;
 	width:0%;
@@ -67,6 +78,12 @@ body>*{
 	z-index:3;
 	background:rgb(53, 53, 53);
 	overflow:hidden;
+}
+.addedProductsContainer{
+	margin:10px;
+	margin-bottom:20px;
+	overflow-y:scroll;
+	height:340px;
 }
 .cartIconClicked{
 	width:30%;
@@ -95,22 +112,13 @@ body>*{
 	background:#FF9955;
 	border-radius:10px;
 	padding:10px;
-	margin-top:80%;
 	border:none;
 	cursor:pointer;
 }
 .cartBody button:hover{
 	background:#ff9f5f;
 }
-.cartBody h5{
-	color:grey;
-	margin:20px 20px 10px 20px;
-	pointer-events:none;
-}
-.cartBody h5>i{
-	margin-left:10px;
-	margin-right:5px;
-}
+
 
 
 /*Menu section css*/
@@ -124,6 +132,13 @@ body>*{
 	color: white;
 }
 
+
+/*mediaQueries for all*/
+@media (max-width:768px){
+	.dummy{
+		margin-top:150px !important;
+	}
+}
 
 
 

@@ -68,3 +68,12 @@ window.addEventListener("resize",()=>{
     trendings.forEach(index=>index.style.transform="translateX("+0+"% )");
     l=0;
 });
+
+function displayImages(){
+    const imageHolder=document.querySelectorAll(".imageHolder");
+    const realNode=document.querySelector(".imageHolderMain");
+    for(let i=1;i<imageHolder.length;i++){
+        imageHolder[i].appendChild(realNode.cloneNode(true));
+    }
+}
+setTimeout(displayImages,0);

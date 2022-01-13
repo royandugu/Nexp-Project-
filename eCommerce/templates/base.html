@@ -1,97 +1,110 @@
-
-	<!---Export start-->
+<!---Export start-->
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title> Online Shopping in Nepal || Banjoi </title>
-	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
-	<link rel="stylesheet" type="text/css" href="../static/css/base.css"/>
-	<link rel="stylesheet" type="text/css" href="../static/css/index.css"/>
-	<link rel="stylesheet" type="text/css" href="../static/css/product.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../static/css/base.css" />
+	<link rel="stylesheet" type="text/css" href="../static/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="../static/css/product.css" />
 </head>
+
 <body>
 
 
 	<div id="fixedPosition">
 
-	<!---Title and search---->
-	<div class="container-fluid titleAndMenuHolder">
-		<div class="row">
-			<div class="col-lg-3 col-md-3 col-12 logoHolder">
-				<h1> bANJOI </h1>
-			</div>
-			<div class="col-lg-8 col-md-8 col-12 searchButtonHolder">
-				<form>
-					<input type="text" placeholder="Search your thread" />
-				</form>
-			</div>
-			<div class="col-lg-1 col-md-1 col-12 userCartHolder">
-				<div class="d-none d-md-block">
-					<i class="fas fa-shopping-cart"></i>
+		<!---Title and search---->
+		<div class="container-fluid titleAndMenuHolder">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-12 logoHolder">
+					<h1> bANJOI </h1>
 				</div>
+				<div class="col-lg-8 col-md-8 col-12 searchButtonHolder">
+					<form>
+						<input type="text" placeholder="Search your thread" />
+					</form>
+				</div>
+				<div class="col-lg-1 col-md-1 col-12 userCartHolder">
+					<div class="d-none d-md-block">
+						<i class="fas fa-shopping-cart"></i>
+					</div>
 
+				</div>
 			</div>
 		</div>
-	</div>
 
 
-	
-	<!---Cart stack-->
-	<div class="cartStack d-none d-md-block">
-		<div class="cartButtonContainer">
-			<i class="far fa-times-circle"></i>
+
+		<!---Cart stack-->
+		<div class="cartStack d-none d-md-block">
+			<div class="cartButtonContainer">
+				<i class="far fa-times-circle"></i>
+			</div>
+			<div class="cartBody">
+				<!---If the user is not logged in-->
+				<div class="priceContainer">
+					<h5> Price : NRS <span class="totalPrice">0</span> </h5>
+				</div>
+				<div class="addedProductsContainer">
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ex, nisi eius laborum nobis,
+						excepturi ratione voluptatibus delectus consectetur nemo veniam vero quae animi vel culpa
+						officia dolorem debitis minima.</p>
+					<!---Added products stay here-->
+				</div>
+				<button href="#"> Go to Cart </button>
+				<!---If the user is logged in -->
+			</div>
 		</div>
-		<div class="cartBody">
-			<!---If the user is not logged in-->
-			<h5> <i class="fas fa-lock"></i>  Feature not added ... </h5>
-			<button href="#"> Go to Cart </button> 
-			<!---If the user is logged in -->
+
+
+		<!----Menu---->
+		<div class="menu bg-dark">
+			<ul class="nav nav-bar justify-content-end">
+				<li class="nav-item">
+					<a href="#" class="nav-link"> Home </a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link"> About </a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link"> Login </a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link"> SignUp</a>
+				</li>
+				<li class="nav-item d-block d-md-none iconSml">
+					<a href="#" class="nav-link"><i class="fas fa-shopping-cart"></i> </a>
+				</li>
+			</ul>
 		</div>
+
+
 	</div>
 
 
-	<!----Menu---->
-	<div class="menu bg-dark">
-		<ul class="nav nav-bar justify-content-end">
-			<li class="nav-item">
-				<a href="#" class="nav-link"> Home </a>
-			</li>
-			<li class="nav-item">
-				<a href="#" class="nav-link"> About </a>
-			</li>
-			<li class="nav-item">
-				<a href="#" class="nav-link"> Login </a>
-			</li>
-			<li class="nav-item">
-				<a href="#" class="nav-link"> SignUp</a>
-			</li>
-			<li class="nav-item d-block d-md-none iconSml">
-				<a href="#" class="nav-link"><i class="fas fa-shopping-cart"></i> </a>
-			</li>
-		</ul>
-	</div>
-
-
-</div>
-
-	
-<!---Dummy text to test that the menu bar is responsive
+	<!---Dummy text to test that the menu bar is responsive
 		will be removed later
 	
 	-->
-	<div style="margin-top:7%;background:green;">
-<p style="font-size:100px;">
+	<div style="margin-top:90px;background:green;width:100%" class="dummy">
+		<p style="font-size:50px;">
 
-	Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, aspernatur libero, quidem numquam fuga nihil hic quam, asperiores quia ratione veritatis ullam. Dolorum, iure tenetur.
-	 Velit voluptatibus mollitia nostrum. Quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, asperiores porro reprehenderit dolorum doloribus temporibus laudantium libero repellendus nam repudiandae exercitationem. Fuga earum facilis ullam eligendi quo aspernatur provident enim?
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, aspernatur libero, quidem numquam fuga nihil
+			hic quam, asperiores quia ratione veritatis ullam. Dolorum, iure tenetur.
+			Velit voluptatibus mollitia nostrum. Quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			Qui, asperiores porro reprehenderit dolorum doloribus temporibus laudantium libero repellendus nam
+			repudiandae exercitationem. Fuga earum facilis ullam eligendi quo aspernatur provident enim?
 
-</p>
-</div>
+		</p>
+	</div>
 
-<!---Dummy text ends-->
+	<!---Dummy text ends-->
 
 </body>
 <script src="https://kit.fontawesome.com/3c2a34836f.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../static/js/base.js"></script>
+
 </html>
 <!---Export end and remove the dummy text-->

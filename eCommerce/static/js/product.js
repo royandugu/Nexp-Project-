@@ -1,20 +1,30 @@
-
-let product=document.querySelector(".product");
-let spaces=document.querySelectorAll(".space");
-for(let i=0;i<spaces.length;i++) {
-    spaces[i].appendChild(product.cloneNode(true));
-}
 let productList=document.querySelectorAll(".product");
 let pageType=document.querySelector(".pageType>div");
-productList.forEach((index,i)=>{
+let product=document.querySelector(".product");
+let spaces=document.querySelectorAll(".space");
+let buttons=document.querySelectorAll(".firstButton");
+let lastIcons=document.querySelectorAll(".lastButton i");
+let popUps=document.querySelectorAll(".popUp input");
+let numberEnter=false;
+
+let cart=document.createElement("i");
+function cloneAddition(){
+    for(let i=0;i<spaces.length;i++) {
+        spaces[i].appendChild(product.cloneNode(true));
+    }
+    idAssignment();
+}
+setTimeout(cloneAddition,0);
+function idAssignment(){
+    productList.forEach((index,i)=>{
     index.setAttribute("id",pageType.getAttribute("class")+i);
 })
-console.log(productList);
+
 productList[spaces.length].classList.add("finalProduct");
-let buttons=document.querySelectorAll(".firstButton");
+}
+
 
 //Media check
-let cart=document.createElement("i");
 
 window.addEventListener("resize",buttonSet);
 function buttonSet(){
@@ -25,11 +35,7 @@ function buttonSet(){
 buttonSet();
 
 //Last button
-let lastIcons=document.querySelectorAll(".lastButton i");
-let popUps=document.querySelectorAll(".popUp input");
-console.log(popUps);
 lastIcons.forEach(index=>index.addEventListener("click",displayForm));
-let numberEnter=false;
 function displayForm(event){
     if(numberEnter===false){
         popUps[Array.from(lastIcons).indexOf(event.target)].classList.remove("invisible");
