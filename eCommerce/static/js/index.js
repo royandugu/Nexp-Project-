@@ -1,5 +1,13 @@
 //Trending page
 // We have to change the whole way we align things and align properly and responsively and fix it using vanilla
+
+const svgButton=document.querySelector("#theButton");
+const textFeild=document.querySelector("#text");
+const planets=document.querySelector("#planets");
+
+const tml=new TimelineMax({});
+let animating=false;
+const componenetList=[svgButton,textFeild,planets];
 const parentCont=document.querySelector(".cardContainer");
 for(let i=0;i<8;i++){
     let card=document.createElement("div");
@@ -77,3 +85,14 @@ function displayImages(){
     }
 }
 setTimeout(displayImages,0);
+
+
+//Gsap
+
+if(document.querySelector("#theButton").addEventListener("click",armAnimation));
+
+function armAnimation(){
+        tml.staggerTo(componenetList,.5,{scale:1.07});
+
+        tml.staggerTo(componenetList,.5,{scale:1});
+}
