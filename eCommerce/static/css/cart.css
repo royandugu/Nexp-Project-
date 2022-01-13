@@ -1,0 +1,104 @@
+.headingContainer{
+    margin-top:20px;
+    margin-left:20px;
+}
+.headingContainer h4{
+    font-weight: bold;
+}
+table{
+    width:100%;
+    margin-top:20px;
+}
+table,tr,th{
+    border:1px solid grey;
+    padding:20px;
+}
+td{
+    padding:20px;
+    border:1px solid grey;
+    height:100% !important;
+}
+.flextd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexPriceDisplay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexPriceDisplay h5{
+    font-weight: bold;
+}
+.perPrice{
+    font-weight: bold;
+}
+.paymentContainer{
+     margin-top:20px;
+    text-align: center;
+}
+.buttonContainer button{
+    padding:10px;
+    border:none;
+    width: 80%;
+    cursor:pointer;
+    outline:none;
+    background:#FF9955 !important;
+    color:white;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.paymentContainer button:hover{
+    background:#ff9f5f;
+}
+.flextd button{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    background:#FF9955;
+    color:white;
+}
+.flextd button:hover{
+    background:#ff9f5f;
+}
+/*Media queries*/
+@media (max-width:768px){
+    td{
+        padding: 0px !important;
+    }
+    img{
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+    .prodDescription p{
+        font-size:13px !important;
+    }
+    .flextd input{
+        width:40% !important;
+    }
+}
+.buttonContainer{
+    width:100%;
+    border-bottom:1px solid rgb(156, 156, 156);
+}
+.cashInDeliver{
+    background:rgb(105, 105, 231);
+}
+.paymentContainer h5{
+    margin-top:20px;
+}
+.paymentContainer button{
+    padding:10px;
+    border:none;
+    width: 80%;
+    cursor:pointer;
+    outline:none;
+    color:white;
+    margin-top:20px;
+    margin-bottom:20px;
+    background:black;
+}
+.cashInDeliver:hover{
+    background:rgb(29, 29, 29) !important;
+}

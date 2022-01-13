@@ -1,13 +1,107 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
 
-        </title>
-    </head>
-    <body>
-        <div class="cartContainer">
-            
+<head>
+    <title> Cart </title>
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/cart.css" />
+</head>
+
+<body>
+    <div class="headingContainer">
+        <h4> Shopping cart </h4>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9 col-md-9 col-12">
+                <table>
+                    <tr>
+                        <th>
+                            <h5>Product Description</h5>
+                        </th>
+                        <th>
+                            <h5>Qty</h5>
+                        </th>
+                        <th>
+                            <h5>Total</h5>
+                        </th>
+                    </tr>
+
+                    <!---Colned when multiple values entered-->
+                    <tr>
+
+                        
+                        <td>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-6 col-12">
+                                        <img src="../static/Image/dummy2.jpg" class="img-fluid"/>
+                                    </div>
+                                    <div class="col-lg-6 col-12 prodDescription">
+                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nemo
+                                            eaque nisi eius, rerum sit, perferendis cum modi sitatibus exercitationem?
+                                        <p class="perPrice"> Per price :NRS. 50</p>
+                                        </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="flextd">
+                            <button onclick="increment()"> + </button><input type="text" class="displayNumber" disabled/><button onclick="decrement()"> - </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="flexPriceDisplay">
+                            <h5> 0 </h5>
+                            </div>
+                        </td>
+
+
+
+                    </tr>
+                    <tr>
+
+                        
+                        <td>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-6 col-12">
+                                        <img src="../static/Image/dummy2.jpg" class="img-fluid"/>
+                                    </div>
+                                    <div class="col-lg-6 col-12 prodDescription">
+                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nemo
+                                            eaque nisi eius, rerum sit, perferendis cum modi sitatibus exercitationem?
+                                        <p class="perPrice"> Per price :NRS. 50</p>
+                                        </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="flextd">
+                            <button onclick="increment()"> + </button><input type="text" class="displayNumber" disabled/><button onclick="decrement()"> - </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="flexPriceDisplay">
+                            <h5> 0 </h5>
+                            </div>
+                        </td>
+
+
+
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-lg-3 col-md-3 col-12 paymentContainer">
+                <div class="buttonContainer">
+                 <button> Pay with khalti </button>
+                 </div>
+                    <h5> or </h5>
+                 <button class="cashInDeliver"> Cash in Deliver </button> 
+            </div>
         </div>
-    </body>
+    </div>
+</body>
+<script type="text/javascript" src="../static/js/cart.js"></script>
 </html>
