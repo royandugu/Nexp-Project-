@@ -23,6 +23,9 @@ td{
     justify-content: center;
     align-items: center;
 }
+.flextd input{
+    width:40%;
+}
 .flexPriceDisplay{
     display: flex;
     justify-content: center;
@@ -49,8 +52,8 @@ td{
     margin-top:20px;
     margin-bottom:20px;
 }
-.paymentContainer button:hover{
-    background:#ff9f5f;
+.khaltiPayment:hover{
+    background:#ff9f5f !important;
 }
 .flextd button{
     border:none;
@@ -63,6 +66,7 @@ td{
     background:#ff9f5f;
 }
 /*Media queries*/
+
 @media (max-width:768px){
     td{
         padding: 0px !important;
@@ -73,9 +77,6 @@ td{
     }
     .prodDescription p{
         font-size:13px !important;
-    }
-    .flextd input{
-        width:40% !important;
     }
 }
 .buttonContainer{
